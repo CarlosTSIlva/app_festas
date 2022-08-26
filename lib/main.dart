@@ -1,4 +1,4 @@
-import 'package:api_example/characters/character_page.dart';
+import 'package:api_example/alugators/alugators_page.dart';
 import 'package:api_example/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Api Example', home: CharactersPage());
+    return const MaterialApp(title: 'Api Example', home: AlugatorsPage());
   }
 }
