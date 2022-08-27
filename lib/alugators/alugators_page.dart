@@ -13,10 +13,14 @@ class AlugatorsPage extends ConsumerWidget {
       body: Center(
         child: getAlugatorsProvider.when(
             data: (data) => Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: data.alugatorResponse
-                      .map((e) => Text(e.clientName))
-                      .toList(),
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: data.alugatorResponse
+                          .map((e) => Text(e.clientName))
+                          .toList(),
+                    ),
+                  ],
                 ),
             error: (error, stackTrace) => const Text('Ooops, erro!'),
             loading: () => const CircularProgressIndicator()),
