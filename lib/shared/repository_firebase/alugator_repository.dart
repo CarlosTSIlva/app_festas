@@ -14,6 +14,7 @@ class AlugatorRepository {
             (e) {
               final value = e.data();
               return AlugatorResponse(
+                value["id"],
                 value['initialDate'],
                 value["finalDate"],
                 value["clientName"],
@@ -34,6 +35,7 @@ class AlugatorRepository {
         (e) {
           final value = e.data();
           return AlugatorResponse(
+            value["id"],
             value['initialDate'],
             value["finalDate"],
             value["clientName"],
@@ -44,7 +46,6 @@ class AlugatorRepository {
         },
       ).toList();
     });
-
     return result.first;
   }
 

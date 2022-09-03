@@ -3,6 +3,8 @@ part 'alugators_response.g.dart';
 
 @JsonSerializable()
 class AlugatorResponse {
+  final String id;
+
   final String initialDate;
   final String finalDate;
   final String clientName;
@@ -11,6 +13,7 @@ class AlugatorResponse {
   final String brinquedosAlugados;
 
   AlugatorResponse(
+    this.id,
     this.initialDate,
     this.finalDate,
     this.clientName,

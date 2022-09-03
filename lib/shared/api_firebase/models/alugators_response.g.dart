@@ -8,6 +8,7 @@ part of 'alugators_response.dart';
 
 AlugatorResponse _$AlugatorResponseFromJson(Map<String, dynamic> json) =>
     AlugatorResponse(
+      json['id'] as String,
       json['initialDate'] as String,
       json['finalDate'] as String,
       json['clientName'] as String,
@@ -18,6 +19,7 @@ AlugatorResponse _$AlugatorResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AlugatorResponseToJson(AlugatorResponse instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'initialDate': instance.initialDate,
       'finalDate': instance.finalDate,
       'clientName': instance.clientName,

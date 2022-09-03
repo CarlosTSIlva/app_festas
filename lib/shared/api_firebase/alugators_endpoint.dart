@@ -11,7 +11,7 @@ class AlugatorsEndpoint {
   }
 
   Future<QuerySnapshot<Map<String, dynamic>>> getByAlugator(String id) {
-    return firebaseStore.collection("rents/$id").get();
+    return firebaseStore.collection("rents").where("id", isEqualTo: id).get();
   }
 
   Future<void> deleteAlugator(String id) {
