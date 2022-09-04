@@ -17,6 +17,12 @@ class AlugatorsPage extends ConsumerWidget {
           child: getAlugatorsProvider.when(
               data: (data) => Column(
                     children: [
+                      OutlinedButton(
+                          child: const Text("Adicioanr"),
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, KidsRoutes.formAlugator);
+                          }),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
